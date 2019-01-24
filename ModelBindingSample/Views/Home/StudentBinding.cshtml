@@ -1,0 +1,26 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "StudentBinding";
+}
+
+<h2>StudentBinding</h2>
+
+<form asp-action="StudentBinding"
+      asp-controller="Home">
+
+    <!-- // First Name // -->
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" />
+    <span class="text-danger" asp-validation-for="FirstName"></span>
+    <br />
+
+    <!-- // Last Name // -->
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" />
+    <span class="text-danger" asp-validation-for="FirstName"></span>
+    <br />
+
+    <!-- // Submit // -->
+    <input class="btn btn-primary" type="submit" value="Register Student" />
+
+</form>

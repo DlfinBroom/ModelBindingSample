@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "StudentForm";
+}
+
+<h2>StudentForm</h2>
+
+@if (ViewData["Msg"] != null) {
+    <h3>@ViewData["Msg"]</h3>
+}
+else {
+    <form asp-action="StudentForm">
+        <label for="FirstName">First Name: </label>
+        <input type="text" name="FirstName" />
+        <br />
+
+        <label for="LastName">Last Name: </label>
+        <input type="text" name="LastName" />
+        <br />
+
+        <input type="submit" value="Add Student" />
+    </form>
+}
+
